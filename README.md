@@ -14,3 +14,6 @@ Got the visual look and feel from this [Adobe XD Weather App Demo Prototype](htt
 
 ### Architecture 
 - **MVVM** (ModelView View Model architecture)
+
+### Third-party Libraries.
+- Volley.
