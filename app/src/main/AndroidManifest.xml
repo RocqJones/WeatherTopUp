@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeatherTop">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".dashboard.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.WeatherTop.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
