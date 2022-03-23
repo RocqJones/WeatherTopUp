@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Weather Top</string>
     <string name="img_icon">img/icon</string>
+    <string name="cancel">Cancel</string>
+    <string name="nairobi_kenya">Nairobi, Kenya</string>
+    <string name="web_23_march_2022">Web, 23 March, 2022</string>
+    <string name="_5_18_pm">5:18 PM</string>
+    <string name="_25_u2103">25℃</string>
 </resources>
