@@ -6,4 +6,17 @@
     <string name="web_23_march_2022">Web, 23 March, 2022</string>
     <string name="_5_18_pm">5:18 PM</string>
     <string name="_25_u2103">25℃</string>
+    <string name="wind_speed_4_2_fpm">Wind Speed: 4.2 FPM</string>
+    <string name="weather_update">Weather Update</string>
+    <string name="country_name">Country Name</string>
+    <string name="ok">OK</string>
+    <string name="message">Message</string>
+
+    <!--  Start API call errors  -->
+    <string name="network_offline">Request timed out because connection was not established.</string>
+    <string name="network_error">Your request timed out due to network failure, kindly check your internet connection and try again.</string>
+    <string name="auth_error">Authorization to access this service was denied, contact service provider for more instructions.</string>
+    <string name="server_error">Request could not be completed, connection with the server was not established, try again later..</string>
+    <string name="parse_error">You run out of internet bundles, kindly purchase and try again!</string>
+    <!--  End API call errors  -->
 </resources>
