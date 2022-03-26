@@ -6,6 +6,11 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.Volley
 
+/**
+ * Makes RequestQueue last the lifetime of this app
+ * Created by - Jones Mbindyo
+ * Date - 27-03-2022
+ */
 class MySingleton private constructor(private val c: Context) {
 
     private var requestQueue: RequestQueue?
