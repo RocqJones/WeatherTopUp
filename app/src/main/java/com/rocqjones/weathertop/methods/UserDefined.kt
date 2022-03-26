@@ -37,9 +37,9 @@ class UserDefined {
         val warnMessage = dialog.findViewById<TextView>(R.id.warnMessage)
         val okBtn = dialog.findViewById<Button>(R.id.okBtn)
         warnMessage.text = message
-        okBtn.setOnClickListener { v: View? -> dialog.dismiss() }
+        okBtn.setOnClickListener { dialog.dismiss() }
         dialog.window!!.attributes.windowAnimations = R.style.DialogAnimation_1
         dialog.show()
-        dialog.setCanceledOnTouchOutside(true)
+        dialog.setCanceledOnTouchOutside(false)
     }
 }
