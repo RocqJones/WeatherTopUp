@@ -3,7 +3,6 @@ package com.rocqjones.weathertop.methods
 import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import com.rocqjones.weathertop.R
