@@ -11,6 +11,11 @@ import java.util.*
 
 class UserDefined {
 
+    /**
+     * Reusable methods
+     * All methods goes here : calculations, logic e.t.c
+     */
+
     var c : Calendar = Calendar.getInstance()
     private var df : SimpleDateFormat? = null
     private var formattedDate = ""
