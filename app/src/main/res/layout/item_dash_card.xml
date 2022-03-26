@@ -16,47 +16,77 @@
 
         <TextView
             android:id="@+id/locationName"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
+            android:fontFamily="@font/poppins_bold"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:text="@string/nairobi_kenya"
+            android:hint="@string/nairobi_kenya"
             android:layout_gravity="center_horizontal"
+            android:gravity="center"
             android:layout_marginTop="16dp"/>
 
         <TextView
-            android:id="@+id/dateTv"
-            android:layout_width="wrap_content"
+            android:id="@+id/dateTimeTv"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
             android:textColor="@color/black"
             android:textSize="14sp"
-            android:text="@string/web_23_march_2022"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"/>
-
-        <TextView
-            android:id="@+id/timeTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            android:text="@string/_5_18_pm"
-            android:layout_gravity="center_horizontal"
+            android:hint="@string/web_23_march_2022"
+            android:gravity="center"
             android:layout_marginTop="8dp"/>
 
         <TextView
             android:id="@+id/degreeTv"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_bold"
-            android:textColor="@color/text_fade_white"
+            android:textColor="@color/temp_color"
             android:textSize="36sp"
-            android:text="@string/_25_u2103"
+            android:hint="@string/_25_u2103"
             android:layout_gravity="center_horizontal"
+            android:gravity="center"
             android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/windSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:hint="@string/wind_speed_4_2_fpm"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:text="@string/weather_update" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:hint="@string/weather_update" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
