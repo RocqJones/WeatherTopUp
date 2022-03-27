@@ -1,5 +1,6 @@
 # WeatherTopUp
-TopUp Mama Solution
+TopUp Mama Solution.
+- The app will desplay weather details of current city (Nairobi) and a list of other 20 cities. The data is fetched in real-time and the application uses internet to ensure the data displayed is correct and upto date.
 
 ### API - Open Weather
 I'm using [Open Weather API](https://openweathermap.org/api) for this application.
