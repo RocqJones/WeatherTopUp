@@ -24,3 +24,14 @@ Got the visual look and feel from this [Adobe XD Weather App Demo Prototype](htt
 
 ### Third-party Libraries.
 - Volley.
+
+### Unit Tests
+- Here we're testing code which doesn't call the Android API to verify our app's correctness, functional behavior, and usability before you release it publicly.
+- **Example Unit Test** method from my code
+```
+@Test
+fun convert_Kelvin_To_Celsius() {
+    val res = 27.75
+    assertEquals(String.format("%.1f", res), userDefined.convertKelvinToCelsius(300.9).toString())
+}
+```
