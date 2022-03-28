@@ -1,7 +1,10 @@
+@file:Suppress("DEPRECATION")
+
 package com.rocqjones.weathertop
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.rocqjones.weathertop.methods.UserDefined
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -15,6 +18,10 @@ import org.junit.Assert.*
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
+
+    /**
+     * testing code which calls an Android API
+     */
     @Test
     fun useAppContext() {
         // Context of the app under test.
