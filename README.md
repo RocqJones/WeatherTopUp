@@ -1,5 +1,6 @@
 # WeatherTopUp
-TopUp Mama Solution
+TopUp Mama Solution.
+- The app will desplay weather details of current city (Nairobi) and a list of other 20 cities. The data is fetched in real-time and the application uses internet to ensure the data displayed is correct and upto date.
 
 ### API - Open Weather
 I'm using [Open Weather API](https://openweathermap.org/api) for this application.
@@ -23,3 +24,14 @@ Got the visual look and feel from this [Adobe XD Weather App Demo Prototype](htt
 
 ### Third-party Libraries.
 - Volley.
+
+### Unit Tests
+- Here we're testing code which doesn't call the Android API to verify our app's correctness, functional behavior, and usability before you release it publicly.
+- **Example Unit Test** method from my code
+```
+@Test
+fun convert_Kelvin_To_Celsius() {
+    val res = 27.75
+    assertEquals(String.format("%.1f", res), userDefined.convertKelvinToCelsius(300.9).toString())
+}
+```
