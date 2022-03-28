@@ -1,15 +1,20 @@
 package com.rocqjones.weathertop.views
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import com.rocqjones.weathertop.R
+import android.widget.AdapterView.OnItemClickListener
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.*
 import com.android.volley.toolbox.JsonObjectRequest
-import com.rocqjones.weathertop.R
 import com.rocqjones.weathertop.adapters.AdapterMultipleCities
 import com.rocqjones.weathertop.databinding.ActivityMainBinding
 import com.rocqjones.weathertop.methods.UserDefined
@@ -28,6 +33,11 @@ class MainActivity : AppCompatActivity() {
     // adapter
     var citiesModelList: MutableList<CitiesModel?>? = null
     private var adapterMultipleCities: AdapterMultipleCities? = null
+    private val mCities = arrayOf("Melbourne", "Vienna", "Vancouver", "Toronto", "Calgary", "Adelaide",
+        "Perth", "Auckland", "Helsinki", "Hamburg", "Munich", "New York", "Sydney", "Paris","Kinshasa",
+        "Cape Town", "Barcelona", "London", "Bangkok","Abuja","Accra","Addis Ababa","Juba","Kampala",
+        "Lusaka","Nairobi","Tripoli","Kigali","Dakar","Cairo","Washington","Ohio","Nevada","Montana",
+        "Mississippi","Arizona","California","Florida","Hawaii","Illinois","Massachusetts","New Jersey")
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,7 +53,40 @@ class MainActivity : AppCompatActivity() {
         binding!!.cancelBtn.setOnClickListener {
             binding!!.defaultLinearLayout.visibility = View.VISIBLE
             binding!!.searchLinearLayout.visibility = View.GONE
+            binding!!.listView.visibility = View.VISIBLE
             binding!!.searchText.text.clear()
+        }
+
+        /**
+         * Declare array of elements, create an adapter and display the array in the ListView
+         * Then TextWatcher to check if the EditText text changes
+         * On select item from ListView intent to search results
+         */
+        val listViewAdapter = ArrayAdapter(this, R.layout.item_listview, mCities)
+        binding!!.listView.adapter = listViewAdapter
+
+        binding!!.searchText.addTextChangedListener(object: TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                listViewAdapter.filter.filter(s)
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                if (binding!!.searchText.text.toString().trim().isNotEmpty()) {
+                    binding!!.listViewHolder.visibility = View.VISIBLE
+                } else {
+                    binding!!.listViewHolder.visibility = View.GONE
+                }
+            }
+        })
+
+        binding!!.listView.onItemClickListener = OnItemClickListener { _, _, position, _ ->
+            val txt = binding!!.listView.getItemAtPosition(position)
+            val intent = Intent(this, SearchResultActivity::class.java)
+            intent.putExtra("searchStr", txt.toString())
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
         }
 
         Log.d("dateTime:", userDefined.currentDateTime()
