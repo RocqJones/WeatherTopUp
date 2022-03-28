@@ -40,6 +40,6 @@ fun convert_Kelvin_To_Celsius() {
 ```
 
 ### App Screenshots
-![img 1](screenshots/one.png)
-![img 2](screenshots/two.png)
-![img 3](screenshots/three.png)
+<a href="url"><img src="screenshots/one.png" height="400" width="200" ></a>
+<a href="url"><img src="screenshots/two.png" height="400" width="200" ></a>
+<a href="url"><img src="screenshots/three.png" height="400" width="200" ></a>
