@@ -18,5 +18,6 @@
     <string name="auth_error">Authorization to access this service was denied, contact service provider for more instructions.</string>
     <string name="server_error">Request could not be completed, connection with the server was not established, try again later..</string>
     <string name="parse_error">You run out of internet bundles, kindly purchase and try again!</string>
+    <string name="search_result">Search result</string>
     <!--  End API call errors  -->
 </resources>
