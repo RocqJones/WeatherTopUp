@@ -2,6 +2,9 @@
 TopUp Mama Solution.
 - The app will desplay weather details of current city (Nairobi) and a list of other 20 cities. The data is fetched in real-time and the application uses internet to ensure the data displayed is correct and upto date.
 
+### APK
+[Click Here to download APK]
+
 ### API - Open Weather
 I'm using [Open Weather API](https://openweathermap.org/api) for this application.
 #### Example Endpoints
@@ -35,3 +38,8 @@ fun convert_Kelvin_To_Celsius() {
     assertEquals(String.format("%.1f", res), userDefined.convertKelvinToCelsius(300.9).toString())
 }
 ```
+
+### App Screenshots
+<a href="url"><img src="screenshots/one.png" height="400" width="200" ></a>
+<a href="url"><img src="screenshots/two.png" height="400" width="200" ></a>
+<a href="url"><img src="screenshots/three.png" height="400" width="200" ></a>
